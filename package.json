@@ -1,0 +1,28 @@
+{
+  "name": "logmyerr",
+  "version": "1.0.3",
+  "description": "LogMyErr plugin will handle the logging of errors, warnings and info",
+  "module": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "log",
+    "logging",
+    "error",
+    "logger",
+    "logmyerr"
+  ],
+  "author": "Arun Kumar Sakthivel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arunsakthivel96/logmyerr"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "logmyerr": "^1.0.1"
+  }
+}
