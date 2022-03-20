@@ -1,6 +1,6 @@
 {
   "name": "logmyerr",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "LogMyErr plugin will handle the logging of errors, warnings and info",
   "module": "index.js",
   "scripts": {
@@ -21,8 +21,5 @@
   "engines": {
     "node": "*"
   },
-  "license": "ISC",
-  "dependencies": {
-    "logmyerr": "^1.0.1"
-  }
+  "license": "MIT"
 }
