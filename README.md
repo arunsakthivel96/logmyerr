@@ -1,3 +1,5 @@
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
 
 # LogMyErr
 
@@ -182,3 +184,15 @@ LoginController.login  = (req, res) => {
 	throw  new  Error("Dummy Exception");
 }
 ```
+## License
+
+[MIT](LICENSE)
+
+[coveralls-image]: https://badgen.net/coveralls/c/github/arunsakthivel96/logmyerr//master
+[coveralls-url]: https://coveralls.io/r/visionmedia/batch?branch=master
+[downloads-image]: https://badgen.net/npm/dm/logmyerr
+[downloads-url]: https://npmjs.org/package/logmyerr
+[npm-image]: https://badgen.net/npm/v/logmyerr
+[npm-url]: https://npmjs.org/package/logmyerr
+[travis-image]: https://badgen.net/travis/visionmedia/logmyerr/master
+<!-- [travis-url]: https://travis-ci.org/visionmedia/batch -->
