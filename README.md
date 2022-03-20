@@ -1,5 +1,6 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
+![PackageBuild](https://github.com/arunsakthivel96/logmyerr/actions/workflows/node.js.yml/badge.svg)
 
 # LogMyErr
 
