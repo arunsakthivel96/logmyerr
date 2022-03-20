@@ -1,4 +1,3 @@
-const {logger} = require('../index');
 let message = "This is a test message";
 
 test(message,()=>{
