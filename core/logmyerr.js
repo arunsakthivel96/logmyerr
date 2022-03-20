@@ -5,7 +5,7 @@
 const fs = require("fs"); // File System
 const path = require("path"); // Path Manipulation
 
-basepath = `${path.resolve(__dirname, "../../")}\\`;
+basepath = `${path.resolve(__dirname, "../../../")}\\`;
 
 // private Singleton instance of the class
 class PrivateSingleton {
