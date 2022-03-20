@@ -1,2 +1,4 @@
 *node_modules/*
 *.circleci/*
+package-lock.json
+logmyerr-*.tgz

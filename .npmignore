@@ -1,3 +1,7 @@
 node_modules
 circleci
 tests
+package-lock.json
+*__tests__/*
+*.github/*
+logmyerr-*.tgz
