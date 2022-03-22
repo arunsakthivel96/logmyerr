@@ -11,30 +11,32 @@ basepath = `${path.resolve(__dirname, "../../../")}\\`;
 class PrivateSingleton {
 
     constructor(config) {
-      this.message = {
+      this.#message = {
         Date: new Date().toISOString(),
         type: "",
         message: "" || [],
       };
      
-      if(Object.keys(config).length == 0) {config = this.defaultConfig};
-      if(Object.keys(config).length > 0) {this.config = config}; 
+      if(Object.keys(config).length == 0) {config = this.#defaultConfig};
+      if(Object.keys(config).length > 0) {this.#config = config}; 
 
-      if(Object.keys(this.config).length < 4) {
-        this.config.logFileName = config.logFileName || this.defaultConfig.logFileName;
-        this.config.logFileExtension = config.logFileExtension || this.defaultConfig.logFileExtension;
-        this.config.logFilePath = config.logFilePath || this.defaultConfig.logFilePath;
-        this.config.logFolderName = config.logFolderName || this.defaultConfig.logFolderName;
+      if(Object.keys(this.#config).length < 4) {
+        this.#config.logFileName = config.logFileName || this.#defaultConfig.logFileName;
+        this.#config.logFileExtension = config.logFileExtension || this.#defaultConfig.logFileExtension;
+        this.#config.logFilePath = config.logFilePath || this.#defaultConfig.logFilePath;
+        this.#config.logFolderName = config.logFolderName || this.#defaultConfig.logFolderName;
       }
 
-      if(this.isEmpty(this.config.logFilePath) ) {this.config.logFilePath = this.defaultConfig.logFilePath;}
-      if(this.isEmpty(this.config.logFileName) ){this.config.logFileName = this.defaultConfig.logFileName;}
-      if(this.isEmpty(this.config.logFileExtension) && typeof(this.config.logFilePath) != "string"){this.config.logFileExtension = this.defaultConfig.logFileExtension;}
-      if(this.isEmpty(this.config.logFolderName) ){this.config.logFolderName = this.defaultConfig.logFolderName;}
+      if(this.isEmpty(this.#config.logFilePath) ) {this.#config.logFilePath = this.#defaultConfig.logFilePath;}
+      if(this.isEmpty(this.#config.logFileName) ){this.#config.logFileName = this.#defaultConfig.logFileName;}
+      if(this.isEmpty(this.#config.logFileExtension) && typeof(this.#config.logFilePath) != "string"){this.#config.logFileExtension = this.#defaultConfig.logFileExtension;}
+      if(this.isEmpty(this.#config.logFolderName) ){this.#config.logFolderName = this.#defaultConfig.logFolderName;}
       // Check it contains . in the string and if not add it
-      if(this.config.logFileExtension.indexOf(".") == -1) {this.config.logFileExtension = `.${this.config.logFileExtension}`;}
-    }    
-    defaultConfig = {
+      if(this.#config.logFileExtension.indexOf(".") == -1) {this.#config.logFileExtension = `.${this.#config.logFileExtension}`;}
+    }   
+    #config = {};
+    #message = {};
+    #defaultConfig = {
         logFileName: "logmyerr" ,
         logFileExtension: ".log",
         logFilePath: basepath,
@@ -47,8 +49,8 @@ class PrivateSingleton {
     // public method
     write = (message, type = this.LOGTYPE.info, priority = this.PRIORITY.informative) => {
 
-    let path =`${this.config.logFilePath}\\${this.config.logFolderName}\\${this.config.logFileName}-${new Date().toISOString().slice(0, 10)}.${this.config.logFileExtension}`;
-    let folder = `${this.config.logFilePath}\\${this.config.logFolderName}\\`;
+    let path =`${this.#config.logFilePath}\\${this.#config.logFolderName}\\${this.#config.logFileName}-${new Date().toISOString().slice(0, 10)}.${this.#config.logFileExtension}`;
+    let folder = `${this.#config.logFilePath}\\${this.#config.logFolderName}\\`;
 
     // Check if the folder exists
     if(!fs.existsSync(folder)){

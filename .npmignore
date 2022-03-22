@@ -5,3 +5,4 @@ package-lock.json
 *__tests__/*
 *.github/*
 logmyerr-*.tgz
+*Apps/*

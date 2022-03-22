@@ -2,3 +2,4 @@
 *.circleci/*
 package-lock.json
 logmyerr-*.tgz
+*Apps/*
