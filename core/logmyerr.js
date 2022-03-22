@@ -58,7 +58,7 @@ class PrivateSingleton {
     }
 
     let data = `==============================================================================================\n`;
-    data += `Date : ${this.message.Date} \ntype : ${type} \nPriority : ${priority} \nmessage : ${message} \n`;
+    data += `Date : ${this.#message.Date} \ntype : ${type} \nPriority : ${priority} \nmessage : ${message} \n`;
     data += `==============================================================================================\n`;
 
     if(!fs.existsSync(path))  fs.writeFileSync(path, data);
